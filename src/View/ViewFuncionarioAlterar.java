@@ -47,6 +47,8 @@ public class ViewFuncionarioAlterar extends javax.swing.JInternalFrame {
         btnFnAlterarCancelar = new javax.swing.JButton();
         btnFnAlterarSalvar = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
         setTitle("Funcionário - Alterar");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/logo-icon.png"))); // NOI18N

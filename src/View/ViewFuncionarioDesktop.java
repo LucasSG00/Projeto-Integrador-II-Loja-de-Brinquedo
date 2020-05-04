@@ -37,6 +37,7 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
         MnFnDesktopProduto = new javax.swing.JMenu();
         MnFnDesktopCarrinho = new javax.swing.JMenuItem();
         MnFnDesktopCadastrarProduto = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         MnFnDesktopEstoque = new javax.swing.JMenuItem();
         MnFnDesktopPesquisar = new javax.swing.JMenuItem();
         MnFnDesktopRelatorio = new javax.swing.JMenu();
@@ -117,6 +118,15 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
             }
         });
         MnFnDesktopProduto.add(MnFnDesktopCadastrarProduto);
+
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/relatorio-mensal-icon.png"))); // NOI18N
+        jMenuItem1.setText("Alterar Produto");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        MnFnDesktopProduto.add(jMenuItem1);
 
         MnFnDesktopEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/estoque-icon.png"))); // NOI18N
         MnFnDesktopEstoque.setText("Estoque Produto");
@@ -240,6 +250,12 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
         viewProdutoCadastrar.setVisible(true);
     }//GEN-LAST:event_MnFnDesktopCadastrarProdutoActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        ViewProdutoAlterar viewProdutoAlterar = new ViewProdutoAlterar();
+        DesktopFuncionario.add(viewProdutoAlterar);
+        viewProdutoAlterar.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -294,5 +310,6 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
     private javax.swing.JMenuItem MnFnDesktopSair;
     private javax.swing.JMenu MnFnDesktopSobre;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     // End of variables declaration//GEN-END:variables
 }
