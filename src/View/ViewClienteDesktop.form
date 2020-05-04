@@ -12,7 +12,7 @@
             <Property name="text" type="java.lang.String" value="Arquivo"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="MnDesktopSair">
+            <MenuItem class="javax.swing.JMenuItem" name="MnClDesktopSair">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Alt+F4"/>
@@ -23,7 +23,7 @@
                 <Property name="text" type="java.lang.String" value="Sair"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnDesktopSairActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnClDesktopSairActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -36,7 +36,7 @@
             <Property name="text" type="java.lang.String" value="Cliente"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="MnDesktopClAlterar">
+            <MenuItem class="javax.swing.JMenuItem" name="MnClDesktopAlterar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/imagens/person-edit-icon.png"/>
@@ -44,10 +44,10 @@
                 <Property name="text" type="java.lang.String" value="Alterar Cadastro"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnDesktopClAlterarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnClDesktopAlterarActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="MnDesktopClDeletar">
+            <MenuItem class="javax.swing.JMenuItem" name="MnClDesktopDeletar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/imagens/person-delete-icon.png"/>
@@ -55,7 +55,7 @@
                 <Property name="text" type="java.lang.String" value="Deletar Cadastro"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnDesktopClDeletarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnClDesktopDeletarActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -68,7 +68,7 @@
             <Property name="text" type="java.lang.String" value="Produto"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="MnDesktopClCarrinho">
+            <MenuItem class="javax.swing.JMenuItem" name="MnClDesktopCarrinho">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/imagens/carrinho-icon.png"/>
@@ -76,10 +76,10 @@
                 <Property name="text" type="java.lang.String" value="Meu Carrinho"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnDesktopClCarrinhoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnClDesktopCarrinhoActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="MnDesktopClPesquisar">
+            <MenuItem class="javax.swing.JMenuItem" name="MnClDesktopPesquisar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/imagens/pesquisar-icon.png"/>
@@ -97,7 +97,7 @@
             <Property name="text" type="java.lang.String" value="Sobre"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="MnDesktopClLoja">
+            <MenuItem class="javax.swing.JMenuItem" name="MnClDesktopLoja">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/imagens/loja-icon.png"/>
@@ -105,7 +105,7 @@
                 <Property name="text" type="java.lang.String" value="Sobre a Loja"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="MnDesktopClCriadores">
+            <MenuItem class="javax.swing.JMenuItem" name="MnClDesktopCriadores">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/imagens/team-icon.png"/>
@@ -113,7 +113,7 @@
                 <Property name="text" type="java.lang.String" value="Sobre os Criadores"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnDesktopClCriadoresActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnClDesktopCriadoresActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>

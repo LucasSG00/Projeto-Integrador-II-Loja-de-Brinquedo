@@ -87,25 +87,33 @@
                                   <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                  <Component id="txtClAlterarNome" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                                  <Component id="txtClAlterarEmail" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                                  <Component id="txtClAlterarCpf" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Component id="txtClAlterarTelefone" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
+                                  <Component id="btnClAlterarSalvar" min="-2" pref="120" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                                  <Component id="SexoMasculino" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                  <Component id="SexoFeminino" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="txtClAlterarNome" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="txtClAlterarEmail" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="txtClAlterarCpf" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="txtClAlterarTelefone" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                                          <Component id="SexoMasculino" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                                          <Component id="SexoFeminino" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <Component id="btnClAlterarSalvar" alignment="1" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="btnClAlterarCancelar" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="52" max="32767" attributes="0"/>
+                  <EmptySpace pref="34" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

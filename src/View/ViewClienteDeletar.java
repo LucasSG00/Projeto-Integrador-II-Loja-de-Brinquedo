@@ -45,7 +45,7 @@ public class ViewClienteDeletar extends javax.swing.JInternalFrame {
         SexoMasculino = new javax.swing.JRadioButton();
         SexoFeminino = new javax.swing.JRadioButton();
         btnClDeletarCancelar = new javax.swing.JButton();
-        btnClDeletarSalvar = new javax.swing.JButton();
+        btnClDeletar = new javax.swing.JButton();
         ConfirmacaoDeletar = new javax.swing.JLabel();
 
         setClosable(true);
@@ -54,7 +54,7 @@ public class ViewClienteDeletar extends javax.swing.JInternalFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/logo-icon.png"))); // NOI18N
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cliente - Alterar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cliente - Deletar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18))); // NOI18N
 
         Nome.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         Nome.setText("Nome *:");
@@ -103,11 +103,11 @@ public class ViewClienteDeletar extends javax.swing.JInternalFrame {
             }
         });
 
-        btnClDeletarSalvar.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        btnClDeletarSalvar.setText("Deletar");
-        btnClDeletarSalvar.addActionListener(new java.awt.event.ActionListener() {
+        btnClDeletar.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        btnClDeletar.setText("Deletar");
+        btnClDeletar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClDeletarSalvarActionPerformed(evt);
+                btnClDeletarActionPerformed(evt);
             }
         });
 
@@ -147,7 +147,7 @@ public class ViewClienteDeletar extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(btnClDeletarCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnClDeletarSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnClDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -179,7 +179,7 @@ public class ViewClienteDeletar extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnClDeletarCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnClDeletarSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnClDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -210,6 +210,7 @@ public class ViewClienteDeletar extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnClDeletarCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClDeletarCancelarActionPerformed
+        /* Irar buscar os dados do banco de dados para fazer repor nos campos */
         txtClDeletarNome.setText("");
         txtClDeletarNome.setBackground(Color.WHITE);
 
@@ -225,8 +226,9 @@ public class ViewClienteDeletar extends javax.swing.JInternalFrame {
         txtClDeletarTelefone.setBackground(Color.WHITE);
     }//GEN-LAST:event_btnClDeletarCancelarActionPerformed
 
-    private void btnClDeletarSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClDeletarSalvarActionPerformed
+    private void btnClDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClDeletarActionPerformed
         try{
+            /* Irár deletar o dado no banco de dados após confirmação */
             JOptionPane.showMessageDialog(this, "Deletado com Sucesso");
             ViewClienteDeletar.this.dispose();
         }
@@ -235,7 +237,7 @@ public class ViewClienteDeletar extends javax.swing.JInternalFrame {
         }
 
         /* Fazer implementação com o Banco de Dados */
-    }//GEN-LAST:event_btnClDeletarSalvarActionPerformed
+    }//GEN-LAST:event_btnClDeletarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -248,8 +250,8 @@ public class ViewClienteDeletar extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton SexoFeminino;
     private javax.swing.JRadioButton SexoMasculino;
     private javax.swing.JLabel Telefone;
+    private javax.swing.JButton btnClDeletar;
     private javax.swing.JButton btnClDeletarCancelar;
-    private javax.swing.JButton btnClDeletarSalvar;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JFormattedTextField txtClDeletarCpf;

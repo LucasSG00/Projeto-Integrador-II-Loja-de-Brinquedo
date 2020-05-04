@@ -57,7 +57,7 @@ public class ViewClienteCadastra extends javax.swing.JDialog {
         txtClCadastroConfSenha = new javax.swing.JPasswordField();
         jMenuBar1 = new javax.swing.JMenuBar();
         MnClCadastroFile = new javax.swing.JMenu();
-        MnSair = new javax.swing.JMenuItem();
+        MnClCadastroSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -208,7 +208,6 @@ public class ViewClienteCadastra extends javax.swing.JDialog {
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel6)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)))
-                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtClCadastroNome, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -281,15 +280,15 @@ public class ViewClienteCadastra extends javax.swing.JDialog {
         MnClCadastroFile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/file-icon.png"))); // NOI18N
         MnClCadastroFile.setText("Arquivo");
 
-        MnSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
-        MnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit-icon.png"))); // NOI18N
-        MnSair.setText("Sair");
-        MnSair.addActionListener(new java.awt.event.ActionListener() {
+        MnClCadastroSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
+        MnClCadastroSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit-icon.png"))); // NOI18N
+        MnClCadastroSair.setText("Sair");
+        MnClCadastroSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnSairActionPerformed(evt);
+                MnClCadastroSairActionPerformed(evt);
             }
         });
-        MnClCadastroFile.add(MnSair);
+        MnClCadastroFile.add(MnClCadastroSair);
 
         jMenuBar1.add(MnClCadastroFile);
 
@@ -322,9 +321,9 @@ public class ViewClienteCadastra extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnSairActionPerformed
+    private void MnClCadastroSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnClCadastroSairActionPerformed
         ViewClienteCadastra.this.dispose();
-    }//GEN-LAST:event_MnSairActionPerformed
+    }//GEN-LAST:event_MnClCadastroSairActionPerformed
 
     private void btnClCadastroCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClCadastroCancelarActionPerformed
         txtClCadastroNome.setText("");
@@ -353,6 +352,7 @@ public class ViewClienteCadastra extends javax.swing.JDialog {
 
     private void btnClCadastroSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClCadastroSalvarActionPerformed
         try{
+            /* Irar no banco de dados para salvar os dados */
             if("".equals(txtClCadastroNome.getText())) {
                 JOptionPane.showMessageDialog(this, "Campo 'Nome' em Branco");            
             }
@@ -491,7 +491,7 @@ public class ViewClienteCadastra extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup GrupoSexoClCadastro;
     private javax.swing.JMenu MnClCadastroFile;
-    private javax.swing.JMenuItem MnSair;
+    private javax.swing.JMenuItem MnClCadastroSair;
     private javax.swing.JRadioButton SexoFeminino;
     private javax.swing.JRadioButton SexoMasculino;
     private javax.swing.JButton btnClCadastroCancelar;

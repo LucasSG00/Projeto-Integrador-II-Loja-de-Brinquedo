@@ -45,8 +45,8 @@ public class ViewCliente extends javax.swing.JFrame {
         MnClienteNavegador = new javax.swing.JMenu();
         MnClienteNavFuncionario = new javax.swing.JMenuItem();
         MnClienteSobre = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        MnClienteLoja = new javax.swing.JMenuItem();
+        MnClienteCriadores = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -177,18 +177,18 @@ public class ViewCliente extends javax.swing.JFrame {
         MnClienteSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/info-icon.png"))); // NOI18N
         MnClienteSobre.setText("Sobre");
 
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/loja-icon.png"))); // NOI18N
-        jMenuItem6.setText("Sobre a Loja");
-        MnClienteSobre.add(jMenuItem6);
+        MnClienteLoja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/loja-icon.png"))); // NOI18N
+        MnClienteLoja.setText("Sobre a Loja");
+        MnClienteSobre.add(MnClienteLoja);
 
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/team-icon.png"))); // NOI18N
-        jMenuItem5.setText("Sobre os Criadores");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        MnClienteCriadores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/team-icon.png"))); // NOI18N
+        MnClienteCriadores.setText("Sobre os Criadores");
+        MnClienteCriadores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                MnClienteCriadoresActionPerformed(evt);
             }
         });
-        MnClienteSobre.add(jMenuItem5);
+        MnClienteSobre.add(MnClienteCriadores);
 
         jMenuBar1.add(MnClienteSobre);
 
@@ -281,9 +281,9 @@ public class ViewCliente extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtClienteUsuarioFocusLost
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void MnClienteCriadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnClienteCriadoresActionPerformed
         new ViewCriadores().setVisible(true);
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_MnClienteCriadoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -322,7 +322,9 @@ public class ViewCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem MnClienteCriadores;
     private javax.swing.JMenu MnClienteFile;
+    private javax.swing.JMenuItem MnClienteLoja;
     private javax.swing.JMenuItem MnClienteNavFuncionario;
     private javax.swing.JMenu MnClienteNavegador;
     private javax.swing.JMenu MnClienteSobre;
@@ -334,8 +336,6 @@ public class ViewCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField txtClienteSenha;
     private javax.swing.JTextField txtClienteUsuario;

@@ -40,8 +40,8 @@ public class ViewFuncionario extends javax.swing.JFrame {
         btnFuncionarioCadastra = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         MnFuncionarioFile = new javax.swing.JMenu();
-        MnLogin = new javax.swing.JMenuItem();
-        MnSair = new javax.swing.JMenuItem();
+        MnFuncionarioLogin = new javax.swing.JMenuItem();
+        MnFuncionarioSair = new javax.swing.JMenuItem();
         MnFuncionarioNavegador = new javax.swing.JMenu();
         MnFuncionarioNavCliente = new javax.swing.JMenuItem();
 
@@ -135,23 +135,23 @@ public class ViewFuncionario extends javax.swing.JFrame {
         MnFuncionarioFile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/file-icon.png"))); // NOI18N
         MnFuncionarioFile.setText("Arquivo");
 
-        MnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/login-icon.png"))); // NOI18N
-        MnLogin.setText("Login");
-        MnLogin.addActionListener(new java.awt.event.ActionListener() {
+        MnFuncionarioLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/login-icon.png"))); // NOI18N
+        MnFuncionarioLogin.setText("Login");
+        MnFuncionarioLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnLoginActionPerformed(evt);
+                MnFuncionarioLoginActionPerformed(evt);
             }
         });
-        MnFuncionarioFile.add(MnLogin);
+        MnFuncionarioFile.add(MnFuncionarioLogin);
 
-        MnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit-icon.png"))); // NOI18N
-        MnSair.setText("Sair");
-        MnSair.addActionListener(new java.awt.event.ActionListener() {
+        MnFuncionarioSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit-icon.png"))); // NOI18N
+        MnFuncionarioSair.setText("Sair");
+        MnFuncionarioSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnSairActionPerformed(evt);
+                MnFuncionarioSairActionPerformed(evt);
             }
         });
-        MnFuncionarioFile.add(MnSair);
+        MnFuncionarioFile.add(MnFuncionarioSair);
 
         jMenuBar1.add(MnFuncionarioFile);
 
@@ -198,14 +198,14 @@ public class ViewFuncionario extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnLoginActionPerformed
+    private void MnFuncionarioLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFuncionarioLoginActionPerformed
         new ViewLogin().setVisible(true);
         ViewFuncionario.this.dispose();
-    }//GEN-LAST:event_MnLoginActionPerformed
+    }//GEN-LAST:event_MnFuncionarioLoginActionPerformed
 
-    private void MnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnSairActionPerformed
+    private void MnFuncionarioSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFuncionarioSairActionPerformed
         ViewFuncionario.this.dispose();
-    }//GEN-LAST:event_MnSairActionPerformed
+    }//GEN-LAST:event_MnFuncionarioSairActionPerformed
 
     private void MnFuncionarioNavClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFuncionarioNavClienteActionPerformed
         new ViewCliente().setVisible(true);
@@ -220,15 +220,20 @@ public class ViewFuncionario extends javax.swing.JFrame {
         if(txtFuncionarioSenha.getText().equals("admin") && txtFuncionarioUsuario.getText().equals("admin")) {
             JOptionPane.showMessageDialog(this, "Acessado Completo!");
         }
-                
             /* Acesso para exemplo */
-        if (!txtFuncionarioSenha.getText().equals("admin")) {
-            JOptionPane.showMessageDialog(this, "Campo 'Senha' inválida");
-            txtFuncionarioSenha.setBackground(Color.red);
+        if (txtFuncionarioSenha.getText().equals("admin") && txtFuncionarioUsuario.getText().equals("admin")) {
+            new ViewFuncionarioDesktop().setVisible(true);
+            ViewFuncionario.this.dispose();
         }
-        if (!txtFuncionarioUsuario.getText().equals("admin")) {
-            JOptionPane.showMessageDialog(this, "Campo 'Usuário' inválida");
-            txtFuncionarioUsuario.setBackground(Color.red);
+        else {
+            if (!txtFuncionarioSenha.getText().equals("admin")) {
+                JOptionPane.showMessageDialog(this, "Campo 'Senha' inválida");
+                txtFuncionarioSenha.setBackground(Color.red);
+            }
+            if (!txtFuncionarioUsuario.getText().equals("admin")) {
+                JOptionPane.showMessageDialog(this, "Campo 'Usuário' inválida");
+                txtFuncionarioUsuario.setBackground(Color.red);
+            }
         }
     }//GEN-LAST:event_btnFuncionarioAcessarActionPerformed
 
@@ -290,10 +295,10 @@ public class ViewFuncionario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu MnFuncionarioFile;
+    private javax.swing.JMenuItem MnFuncionarioLogin;
     private javax.swing.JMenuItem MnFuncionarioNavCliente;
     private javax.swing.JMenu MnFuncionarioNavegador;
-    private javax.swing.JMenuItem MnLogin;
-    private javax.swing.JMenuItem MnSair;
+    private javax.swing.JMenuItem MnFuncionarioSair;
     private javax.swing.JButton btnFuncionarioAcessar;
     private javax.swing.JButton btnFuncionarioCadastra;
     private javax.swing.JLabel jLabel1;

@@ -34,7 +34,7 @@ public class ViewLogin extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         MnLoginFile = new javax.swing.JMenu();
         MnSair = new javax.swing.JMenuItem();
-        MnClienteDesktopSobre = new javax.swing.JMenu();
+        MnSobre = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
 
@@ -98,12 +98,12 @@ public class ViewLogin extends javax.swing.JFrame {
 
         jMenuBar1.add(MnLoginFile);
 
-        MnClienteDesktopSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/info-icon.png"))); // NOI18N
-        MnClienteDesktopSobre.setText("Sobre");
+        MnSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/info-icon.png"))); // NOI18N
+        MnSobre.setText("Sobre");
 
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/loja-icon.png"))); // NOI18N
         jMenuItem6.setText("Sobre a Loja");
-        MnClienteDesktopSobre.add(jMenuItem6);
+        MnSobre.add(jMenuItem6);
 
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/team-icon.png"))); // NOI18N
         jMenuItem5.setText("Sobre os Criadores");
@@ -112,9 +112,9 @@ public class ViewLogin extends javax.swing.JFrame {
                 jMenuItem5ActionPerformed(evt);
             }
         });
-        MnClienteDesktopSobre.add(jMenuItem5);
+        MnSobre.add(jMenuItem5);
 
-        jMenuBar1.add(MnClienteDesktopSobre);
+        jMenuBar1.add(MnSobre);
 
         setJMenuBar(jMenuBar1);
 
@@ -199,9 +199,9 @@ public class ViewLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu MnClienteDesktopSobre;
     private javax.swing.JMenu MnLoginFile;
     private javax.swing.JMenuItem MnSair;
+    private javax.swing.JMenu MnSobre;
     private javax.swing.JButton btnLoginCliente;
     private javax.swing.JButton btnLoginFuncionario;
     private javax.swing.JLabel jLabel2;

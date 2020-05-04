@@ -5,6 +5,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Lucas
@@ -38,6 +40,7 @@ public class ViewMeuCarrinho extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setMaximizable(true);
         setTitle("Cliente - Meu Carrinho");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/logo-icon.png"))); // NOI18N
@@ -92,6 +95,11 @@ public class ViewMeuCarrinho extends javax.swing.JInternalFrame {
 
         btnCarrinhoDeletar.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         btnCarrinhoDeletar.setText("Deletar");
+        btnCarrinhoDeletar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCarrinhoDeletarActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Digite o Cod do Produto:");
 
@@ -145,6 +153,15 @@ public class ViewMeuCarrinho extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCarrinhoDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCarrinhoDeletarActionPerformed
+        try {
+            /* Dado deletado no banco de dados */            
+        }
+        catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Erro no Sistema!");
+        }
+    }//GEN-LAST:event_btnCarrinhoDeletarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

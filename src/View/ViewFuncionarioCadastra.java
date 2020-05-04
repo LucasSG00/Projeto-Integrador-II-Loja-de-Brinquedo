@@ -60,7 +60,7 @@ public class ViewFuncionarioCadastra extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         MnFnCadastroFile = new javax.swing.JMenu();
-        MnSair = new javax.swing.JMenuItem();
+        MnFnCadastroSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -98,11 +98,6 @@ public class ViewFuncionarioCadastra extends javax.swing.JDialog {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 txtFnCadastroEmailFocusLost(evt);
-            }
-        });
-        txtFnCadastroEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFnCadastroEmailActionPerformed(evt);
             }
         });
 
@@ -335,14 +330,14 @@ public class ViewFuncionarioCadastra extends javax.swing.JDialog {
         MnFnCadastroFile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/file-icon.png"))); // NOI18N
         MnFnCadastroFile.setText("Arquivo");
 
-        MnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit-icon.png"))); // NOI18N
-        MnSair.setText("Sair");
-        MnSair.addActionListener(new java.awt.event.ActionListener() {
+        MnFnCadastroSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit-icon.png"))); // NOI18N
+        MnFnCadastroSair.setText("Sair");
+        MnFnCadastroSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnSairActionPerformed(evt);
+                MnFnCadastroSairActionPerformed(evt);
             }
         });
-        MnFnCadastroFile.add(MnSair);
+        MnFnCadastroFile.add(MnFnCadastroSair);
 
         jMenuBar1.add(MnFnCadastroFile);
 
@@ -375,10 +370,6 @@ public class ViewFuncionarioCadastra extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtFnCadastroEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFnCadastroEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtFnCadastroEmailActionPerformed
-
     private void btnFnCadastroCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFnCadastroCancelarActionPerformed
         txtFnCadastroNome.setText("");
         txtFnCadastroNome.setBackground(Color.white);
@@ -410,12 +401,13 @@ public class ViewFuncionarioCadastra extends javax.swing.JDialog {
         txtFnCadastroConfSenha.setBackground(Color.white);        
     }//GEN-LAST:event_btnFnCadastroCancelarActionPerformed
 
-    private void MnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnSairActionPerformed
+    private void MnFnCadastroSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnCadastroSairActionPerformed
         ViewFuncionarioCadastra.this.dispose();
-    }//GEN-LAST:event_MnSairActionPerformed
+    }//GEN-LAST:event_MnFnCadastroSairActionPerformed
 
     private void btnFnCadastroSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFnCadastroSalvarActionPerformed
         try{
+            /* Irar no banco de dados para salvar os dados */
             if("".equals(txtFnCadastroNome.getText())) {
                 JOptionPane.showMessageDialog(this, "Campo 'Nome' em Branco");            
             }
@@ -592,7 +584,7 @@ public class ViewFuncionarioCadastra extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup GrupoSexoFnCadastro;
     private javax.swing.JMenu MnFnCadastroFile;
-    private javax.swing.JMenuItem MnSair;
+    private javax.swing.JMenuItem MnFnCadastroSair;
     private javax.swing.JRadioButton SexoFeminino;
     private javax.swing.JRadioButton SexoMasculino;
     private javax.swing.JButton btnFnCadastroCancelar;
