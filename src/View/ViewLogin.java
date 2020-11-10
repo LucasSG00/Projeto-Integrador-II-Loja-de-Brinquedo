@@ -5,6 +5,10 @@
  */
 package View;
 
+import View.ViewFuncionarioDesktop;
+import java.awt.Color;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Lucas
@@ -12,7 +16,7 @@ package View;
 public class ViewLogin extends javax.swing.JFrame {
 
     /**
-     * Creates new form ViewLogin
+     * Creates new form ViewFuncionarioT
      */
     public ViewLogin() {
         initComponents();
@@ -28,34 +32,49 @@ public class ViewLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnLoginCliente = new javax.swing.JButton();
-        btnLoginFuncionario = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtFuncionarioUsuario = new javax.swing.JTextField();
+        txtFuncionarioSenha = new javax.swing.JPasswordField();
+        btnFuncionarioAcessar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        MnLoginFile = new javax.swing.JMenu();
-        MnSair = new javax.swing.JMenuItem();
-        MnSobre = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        MnFuncionarioFile = new javax.swing.JMenu();
+        MnFuncionarioSair = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Joy - Bem-Vindo");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Login - Funcionário", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18))); // NOI18N
+        jPanel1.setPreferredSize(new java.awt.Dimension(442, 190));
 
-        btnLoginCliente.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        btnLoginCliente.setText("Cliente");
-        btnLoginCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginClienteActionPerformed(evt);
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel1.setText("Usuário:");
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setText("Senha:");
+
+        txtFuncionarioUsuario.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtFuncionarioUsuarioFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtFuncionarioUsuarioFocusLost(evt);
             }
         });
 
-        btnLoginFuncionario.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        btnLoginFuncionario.setText("Funcionário");
-        btnLoginFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        txtFuncionarioSenha.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtFuncionarioSenhaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtFuncionarioSenhaFocusLost(evt);
+            }
+        });
+
+        btnFuncionarioAcessar.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        btnFuncionarioAcessar.setText("Acessar");
+        btnFuncionarioAcessar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginFuncionarioActionPerformed(evt);
+                btnFuncionarioAcessarActionPerformed(evt);
             }
         });
 
@@ -64,57 +83,50 @@ public class ViewLogin extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnLoginCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLoginFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel3))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtFuncionarioUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtFuncionarioSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(btnFuncionarioAcessar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(btnLoginCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnLoginFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtFuncionarioUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtFuncionarioSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(btnFuncionarioAcessar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
         );
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/logo-icon.png"))); // NOI18N
+        MnFuncionarioFile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/file-icon.png"))); // NOI18N
+        MnFuncionarioFile.setText("Arquivo");
 
-        MnLoginFile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/file-icon.png"))); // NOI18N
-        MnLoginFile.setText("Arquivo");
-
-        MnSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
-        MnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit-icon.png"))); // NOI18N
-        MnSair.setText("Sair");
-        MnSair.addActionListener(new java.awt.event.ActionListener() {
+        MnFuncionarioSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit-icon.png"))); // NOI18N
+        MnFuncionarioSair.setText("Sair");
+        MnFuncionarioSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnSairActionPerformed(evt);
+                MnFuncionarioSairActionPerformed(evt);
             }
         });
-        MnLoginFile.add(MnSair);
-        MnSair.getAccessibleContext().setAccessibleDescription("");
+        MnFuncionarioFile.add(MnFuncionarioSair);
 
-        jMenuBar1.add(MnLoginFile);
-
-        MnSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/info-icon.png"))); // NOI18N
-        MnSobre.setText("Sobre");
-
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/loja-icon.png"))); // NOI18N
-        jMenuItem6.setText("Sobre a Loja");
-        MnSobre.add(jMenuItem6);
-
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/team-icon.png"))); // NOI18N
-        jMenuItem5.setText("Sobre os Criadores");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
-        MnSobre.add(jMenuItem5);
-
-        jMenuBar1.add(MnSobre);
+        jMenuBar1.add(MnFuncionarioFile);
 
         setJMenuBar(jMenuBar1);
 
@@ -123,45 +135,66 @@ public class ViewLogin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(14, 14, 14)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(195, 195, 195))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLoginClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginClienteActionPerformed
-        new ViewCliente().setVisible(true);
+    private void MnFuncionarioSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFuncionarioSairActionPerformed
         ViewLogin.this.dispose();
-    }//GEN-LAST:event_btnLoginClienteActionPerformed
+    }//GEN-LAST:event_MnFuncionarioSairActionPerformed
 
-    private void MnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnSairActionPerformed
-        ViewLogin.this.dispose();        
-    }//GEN-LAST:event_MnSairActionPerformed
+    private void btnFuncionarioAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionarioAcessarActionPerformed
+        if(txtFuncionarioSenha.getText().equals("admin") && txtFuncionarioUsuario.getText().equals("admin")) {
+            JOptionPane.showMessageDialog(this, "Bem-Vindo ao Sistema!");
+        }
+            /* Acesso para exemplo */
+        if (txtFuncionarioSenha.getText().equals("admin") && txtFuncionarioUsuario.getText().equals("admin")) {
+            new ViewFuncionarioDesktop().setVisible(true);
+            ViewLogin.this.dispose();
+        }
+        else {
+            if (!txtFuncionarioSenha.getText().equals("admin")) {
+                JOptionPane.showMessageDialog(this, "Campo 'Senha' inválida");
+                txtFuncionarioSenha.setBackground(Color.red);
+            }
+            if (!txtFuncionarioUsuario.getText().equals("admin")) {
+                JOptionPane.showMessageDialog(this, "Campo 'Usuário' inválida");
+                txtFuncionarioUsuario.setBackground(Color.red);
+            }
+        }
+    }//GEN-LAST:event_btnFuncionarioAcessarActionPerformed
 
-    private void btnLoginFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginFuncionarioActionPerformed
-        new ViewFuncionario().setVisible(true);
-        ViewLogin.this.dispose();
-    }//GEN-LAST:event_btnLoginFuncionarioActionPerformed
+    private void txtFuncionarioSenhaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFuncionarioSenhaFocusGained
+        txtFuncionarioSenha.setBackground(Color.white);
+    }//GEN-LAST:event_txtFuncionarioSenhaFocusGained
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        new ViewCriadores().setVisible(true);
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    private void txtFuncionarioSenhaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFuncionarioSenhaFocusLost
+        if(txtFuncionarioSenha.getText().trim().equals("")) {
+            txtFuncionarioSenha.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_txtFuncionarioSenhaFocusLost
+
+    private void txtFuncionarioUsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFuncionarioUsuarioFocusGained
+        txtFuncionarioUsuario.setBackground(Color.white);
+    }//GEN-LAST:event_txtFuncionarioUsuarioFocusGained
+
+    private void txtFuncionarioUsuarioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFuncionarioUsuarioFocusLost
+        if(txtFuncionarioUsuario.getText().trim().equals("")) {
+            txtFuncionarioUsuario.setBackground(Color.red);
+        }
+    }//GEN-LAST:event_txtFuncionarioUsuarioFocusLost
 
     /**
      * @param args the command line arguments
@@ -189,6 +222,9 @@ public class ViewLogin extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ViewLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -199,15 +235,14 @@ public class ViewLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu MnLoginFile;
-    private javax.swing.JMenuItem MnSair;
-    private javax.swing.JMenu MnSobre;
-    private javax.swing.JButton btnLoginCliente;
-    private javax.swing.JButton btnLoginFuncionario;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu MnFuncionarioFile;
+    private javax.swing.JMenuItem MnFuncionarioSair;
+    private javax.swing.JButton btnFuncionarioAcessar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField txtFuncionarioSenha;
+    private javax.swing.JTextField txtFuncionarioUsuario;
     // End of variables declaration//GEN-END:variables
 }

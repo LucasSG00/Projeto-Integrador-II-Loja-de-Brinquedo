@@ -31,31 +31,63 @@
         <Menu class="javax.swing.JMenu" name="MnFnDesktopNavegador">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagens/cliente-icon.png"/>
+              <Image iconType="3" name="/imagens/funcionario-icon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Funcion&#xe1;rio"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopAlterar">
+            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopCadastrar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/imagens/person-edit-icon.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Alterar Cadastro"/>
+                <Property name="text" type="java.lang.String" value="Cadastrar Funcionario"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnFnDesktopAlterarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnFnDesktopCadastrarActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopDeletar">
+            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopGestao">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagens/person-delete-icon.png"/>
+                  <Image iconType="3" name="/imagens/relatorio-mensal-icon.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Deletar Cadastro"/>
+                <Property name="text" type="java.lang.String" value="Gest&#xe3;o de Funcion&#xe1;rios"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnFnDesktopDeletarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnFnDesktopGestaoActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="MnFnDesktopNavegador1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagens/cliente-icon.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Cliente"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopCadastrar1">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imagens/person-edit-icon.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Cadastrar Cliente"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnFnDesktopCadastrar1ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopGestao1">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imagens/relatorio-mensal-icon.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Gest&#xe3;o de Clientes"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnFnDesktopGestao1ActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -68,17 +100,6 @@
             <Property name="text" type="java.lang.String" value="Produto"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopCarrinho">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagens/carrinho-icon.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Meu Carrinho"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnFnDesktopCarrinhoActionPerformed"/>
-              </Events>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopCadastrarProduto">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -95,58 +116,39 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/imagens/relatorio-mensal-icon.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Alterar Produto"/>
+                <Property name="text" type="java.lang.String" value="Gest&#xe3;o dos Produtos"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
               </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopEstoque">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagens/estoque-icon.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Estoque Produto"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnFnDesktopEstoqueActionPerformed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopPesquisar">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagens/pesquisar-icon.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pesquisar Produto"/>
-              </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="MnFnDesktopRelatorio">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagens/relatorio-icon.png"/>
+              <Image iconType="3" name="/imagens/loja-icon.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Relat&#xf3;rio"/>
+            <Property name="text" type="java.lang.String" value="Venda"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopRelatorioCliente">
+            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopVenda">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagens/relatorio-cliente-icon.png"/>
+                  <Image iconType="3" name="/imagens/carrinho-icon.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Relat&#xf3;rio Cliente"/>
+                <Property name="text" type="java.lang.String" value="Venda"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnFnDesktopRelatorioClienteActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnFnDesktopVendaActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopRelatorioMensal">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagens/relatorio-mensal-icon.png"/>
+                  <Image iconType="3" name="/imagens/relatorio-icon.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Relat&#xf3;rio Mensal"/>
+                <Property name="text" type="java.lang.String" value="Relat&#xf3;rio Vendas"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MnFnDesktopRelatorioMensalActionPerformed"/>
@@ -162,14 +164,6 @@
             <Property name="text" type="java.lang.String" value="Sobre"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopLoja">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagens/loja-icon.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Sobre a Loja"/>
-              </Properties>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="MnFnDesktopCriadores">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -214,7 +208,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="DesktopFuncionario" alignment="0" max="32767" attributes="0"/>
+          <Component id="DesktopFuncionario" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -229,7 +223,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="800" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="802" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>

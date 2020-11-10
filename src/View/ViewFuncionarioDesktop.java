@@ -7,7 +7,7 @@ package View;
 
 /**
  *
- * @author Lucas
+ * @author Matheus.Caetano
  */
 public class ViewFuncionarioDesktop extends javax.swing.JFrame {
 
@@ -32,19 +32,18 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
         MnFnDesktopFile = new javax.swing.JMenu();
         MnFnDesktopSair = new javax.swing.JMenuItem();
         MnFnDesktopNavegador = new javax.swing.JMenu();
-        MnFnDesktopAlterar = new javax.swing.JMenuItem();
-        MnFnDesktopDeletar = new javax.swing.JMenuItem();
+        MnFnDesktopCadastrar = new javax.swing.JMenuItem();
+        MnFnDesktopGestao = new javax.swing.JMenuItem();
+        MnFnDesktopNavegador1 = new javax.swing.JMenu();
+        MnFnDesktopCadastrar1 = new javax.swing.JMenuItem();
+        MnFnDesktopGestao1 = new javax.swing.JMenuItem();
         MnFnDesktopProduto = new javax.swing.JMenu();
-        MnFnDesktopCarrinho = new javax.swing.JMenuItem();
         MnFnDesktopCadastrarProduto = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
-        MnFnDesktopEstoque = new javax.swing.JMenuItem();
-        MnFnDesktopPesquisar = new javax.swing.JMenuItem();
         MnFnDesktopRelatorio = new javax.swing.JMenu();
-        MnFnDesktopRelatorioCliente = new javax.swing.JMenuItem();
+        MnFnDesktopVenda = new javax.swing.JMenuItem();
         MnFnDesktopRelatorioMensal = new javax.swing.JMenuItem();
         MnFnDesktopSobre = new javax.swing.JMenu();
-        MnFnDesktopLoja = new javax.swing.JMenuItem();
         MnFnDesktopCriadores = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,7 +56,7 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
         );
         DesktopFuncionarioLayout.setVerticalGroup(
             DesktopFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 802, Short.MAX_VALUE)
         );
 
         MnFnDesktopFile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/file-icon.png"))); // NOI18N
@@ -75,40 +74,54 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
 
         jMenuBar1.add(MnFnDesktopFile);
 
-        MnFnDesktopNavegador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cliente-icon.png"))); // NOI18N
+        MnFnDesktopNavegador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/funcionario-icon.png"))); // NOI18N
         MnFnDesktopNavegador.setText("Funcionário");
 
-        MnFnDesktopAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/person-edit-icon.png"))); // NOI18N
-        MnFnDesktopAlterar.setText("Alterar Cadastro");
-        MnFnDesktopAlterar.addActionListener(new java.awt.event.ActionListener() {
+        MnFnDesktopCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/person-edit-icon.png"))); // NOI18N
+        MnFnDesktopCadastrar.setText("Cadastrar Funcionario");
+        MnFnDesktopCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnFnDesktopAlterarActionPerformed(evt);
+                MnFnDesktopCadastrarActionPerformed(evt);
             }
         });
-        MnFnDesktopNavegador.add(MnFnDesktopAlterar);
+        MnFnDesktopNavegador.add(MnFnDesktopCadastrar);
 
-        MnFnDesktopDeletar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/person-delete-icon.png"))); // NOI18N
-        MnFnDesktopDeletar.setText("Deletar Cadastro");
-        MnFnDesktopDeletar.addActionListener(new java.awt.event.ActionListener() {
+        MnFnDesktopGestao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/relatorio-mensal-icon.png"))); // NOI18N
+        MnFnDesktopGestao.setText("Gestão de Funcionários");
+        MnFnDesktopGestao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnFnDesktopDeletarActionPerformed(evt);
+                MnFnDesktopGestaoActionPerformed(evt);
             }
         });
-        MnFnDesktopNavegador.add(MnFnDesktopDeletar);
+        MnFnDesktopNavegador.add(MnFnDesktopGestao);
 
         jMenuBar1.add(MnFnDesktopNavegador);
 
-        MnFnDesktopProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produto-icon.png"))); // NOI18N
-        MnFnDesktopProduto.setText("Produto");
+        MnFnDesktopNavegador1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cliente-icon.png"))); // NOI18N
+        MnFnDesktopNavegador1.setText("Cliente");
 
-        MnFnDesktopCarrinho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/carrinho-icon.png"))); // NOI18N
-        MnFnDesktopCarrinho.setText("Meu Carrinho");
-        MnFnDesktopCarrinho.addActionListener(new java.awt.event.ActionListener() {
+        MnFnDesktopCadastrar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/person-edit-icon.png"))); // NOI18N
+        MnFnDesktopCadastrar1.setText("Cadastrar Cliente");
+        MnFnDesktopCadastrar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnFnDesktopCarrinhoActionPerformed(evt);
+                MnFnDesktopCadastrar1ActionPerformed(evt);
             }
         });
-        MnFnDesktopProduto.add(MnFnDesktopCarrinho);
+        MnFnDesktopNavegador1.add(MnFnDesktopCadastrar1);
+
+        MnFnDesktopGestao1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/relatorio-mensal-icon.png"))); // NOI18N
+        MnFnDesktopGestao1.setText("Gestão de Clientes");
+        MnFnDesktopGestao1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnFnDesktopGestao1ActionPerformed(evt);
+            }
+        });
+        MnFnDesktopNavegador1.add(MnFnDesktopGestao1);
+
+        jMenuBar1.add(MnFnDesktopNavegador1);
+
+        MnFnDesktopProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produto-icon.png"))); // NOI18N
+        MnFnDesktopProduto.setText("Produto");
 
         MnFnDesktopCadastrarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/brinquedo-icon.png"))); // NOI18N
         MnFnDesktopCadastrarProduto.setText("Cadastrar Produto");
@@ -120,7 +133,7 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
         MnFnDesktopProduto.add(MnFnDesktopCadastrarProduto);
 
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/relatorio-mensal-icon.png"))); // NOI18N
-        jMenuItem1.setText("Alterar Produto");
+        jMenuItem1.setText("Gestão dos Produtos");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -128,35 +141,22 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
         });
         MnFnDesktopProduto.add(jMenuItem1);
 
-        MnFnDesktopEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/estoque-icon.png"))); // NOI18N
-        MnFnDesktopEstoque.setText("Estoque Produto");
-        MnFnDesktopEstoque.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnFnDesktopEstoqueActionPerformed(evt);
-            }
-        });
-        MnFnDesktopProduto.add(MnFnDesktopEstoque);
-
-        MnFnDesktopPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar-icon.png"))); // NOI18N
-        MnFnDesktopPesquisar.setText("Pesquisar Produto");
-        MnFnDesktopProduto.add(MnFnDesktopPesquisar);
-
         jMenuBar1.add(MnFnDesktopProduto);
 
-        MnFnDesktopRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/relatorio-icon.png"))); // NOI18N
-        MnFnDesktopRelatorio.setText("Relatório");
+        MnFnDesktopRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/loja-icon.png"))); // NOI18N
+        MnFnDesktopRelatorio.setText("Venda");
 
-        MnFnDesktopRelatorioCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/relatorio-cliente-icon.png"))); // NOI18N
-        MnFnDesktopRelatorioCliente.setText("Relatório Cliente");
-        MnFnDesktopRelatorioCliente.addActionListener(new java.awt.event.ActionListener() {
+        MnFnDesktopVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/carrinho-icon.png"))); // NOI18N
+        MnFnDesktopVenda.setText("Venda");
+        MnFnDesktopVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnFnDesktopRelatorioClienteActionPerformed(evt);
+                MnFnDesktopVendaActionPerformed(evt);
             }
         });
-        MnFnDesktopRelatorio.add(MnFnDesktopRelatorioCliente);
+        MnFnDesktopRelatorio.add(MnFnDesktopVenda);
 
-        MnFnDesktopRelatorioMensal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/relatorio-mensal-icon.png"))); // NOI18N
-        MnFnDesktopRelatorioMensal.setText("Relatório Mensal");
+        MnFnDesktopRelatorioMensal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/relatorio-icon.png"))); // NOI18N
+        MnFnDesktopRelatorioMensal.setText("Relatório Vendas");
         MnFnDesktopRelatorioMensal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MnFnDesktopRelatorioMensalActionPerformed(evt);
@@ -168,10 +168,6 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
 
         MnFnDesktopSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/info-icon.png"))); // NOI18N
         MnFnDesktopSobre.setText("Sobre");
-
-        MnFnDesktopLoja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/loja-icon.png"))); // NOI18N
-        MnFnDesktopLoja.setText("Sobre a Loja");
-        MnFnDesktopSobre.add(MnFnDesktopLoja);
 
         MnFnDesktopCriadores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/team-icon.png"))); // NOI18N
         MnFnDesktopCriadores.setText("Sobre os Criadores");
@@ -194,7 +190,7 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DesktopFuncionario)
+            .addComponent(DesktopFuncionario, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
@@ -204,57 +200,59 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
         ViewFuncionarioDesktop.this.dispose();
     }//GEN-LAST:event_MnFnDesktopSairActionPerformed
 
-    private void MnFnDesktopAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopAlterarActionPerformed
-        ViewFuncionarioAlterar viewFuncionarioAltera = new ViewFuncionarioAlterar();
+    private void MnFnDesktopGestaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopGestaoActionPerformed
+        ViewGestaoFuncionarios viewFuncionarioAltera = new ViewGestaoFuncionarios();
         DesktopFuncionario.add(viewFuncionarioAltera);
         viewFuncionarioAltera.setVisible(true);
-    }//GEN-LAST:event_MnFnDesktopAlterarActionPerformed
-
-    private void MnFnDesktopDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopDeletarActionPerformed
-        ViewFuncionarioDeletar viewFuncionarioDeletar = new ViewFuncionarioDeletar();
-        DesktopFuncionario.add(viewFuncionarioDeletar);
-        viewFuncionarioDeletar.setVisible(true);
-    }//GEN-LAST:event_MnFnDesktopDeletarActionPerformed
-
-    private void MnFnDesktopCarrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopCarrinhoActionPerformed
-        ViewMeuCarrinho viewMeuCarrinho = new ViewMeuCarrinho();
-        DesktopFuncionario.add(viewMeuCarrinho);
-        viewMeuCarrinho.setVisible(true);
-    }//GEN-LAST:event_MnFnDesktopCarrinhoActionPerformed
+    }//GEN-LAST:event_MnFnDesktopGestaoActionPerformed
 
     private void MnFnDesktopCriadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopCriadoresActionPerformed
         new ViewCriadores().setVisible(true);
     }//GEN-LAST:event_MnFnDesktopCriadoresActionPerformed
 
-    private void MnFnDesktopRelatorioClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopRelatorioClienteActionPerformed
-        ViewRelatorioCliente viewRelatorioCliente = new ViewRelatorioCliente();
-        DesktopFuncionario.add(viewRelatorioCliente);
-        viewRelatorioCliente.setVisible(true);
-    }//GEN-LAST:event_MnFnDesktopRelatorioClienteActionPerformed
+    private void MnFnDesktopVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopVendaActionPerformed
+      ViewFormularioVenda viewFormulariovenda = new ViewFormularioVenda();
+        DesktopFuncionario.add(viewFormulariovenda);
+        viewFormulariovenda.setVisible(true);  
+    }//GEN-LAST:event_MnFnDesktopVendaActionPerformed
 
     private void MnFnDesktopRelatorioMensalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopRelatorioMensalActionPerformed
-        ViewRelatorioMensal viewRelatorioMensal = new ViewRelatorioMensal();
-        DesktopFuncionario.add(viewRelatorioMensal);
-        viewRelatorioMensal.setVisible(true);
+       ViewRelatorioVenda viewRelatoriovenda = new ViewRelatorioVenda();
+        DesktopFuncionario.add(viewRelatoriovenda);
+        viewRelatoriovenda.setVisible(true);  
     }//GEN-LAST:event_MnFnDesktopRelatorioMensalActionPerformed
 
-    private void MnFnDesktopEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopEstoqueActionPerformed
-        ViewEstoque viewEstoque = new ViewEstoque();
-        DesktopFuncionario.add(viewEstoque);
-        viewEstoque.setVisible(true);
-    }//GEN-LAST:event_MnFnDesktopEstoqueActionPerformed
-
     private void MnFnDesktopCadastrarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopCadastrarProdutoActionPerformed
-        ViewProdutoCadastra viewProdutoCadastrar = new ViewProdutoCadastra();
+        ViewProdutoCadastrar viewProdutoCadastrar = new ViewProdutoCadastrar();
         DesktopFuncionario.add(viewProdutoCadastrar);
         viewProdutoCadastrar.setVisible(true);
     }//GEN-LAST:event_MnFnDesktopCadastrarProdutoActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        ViewProdutoAlterar viewProdutoAlterar = new ViewProdutoAlterar();
+        ViewGestaoProdutos viewProdutoAlterar = new ViewGestaoProdutos();
         DesktopFuncionario.add(viewProdutoAlterar);
         viewProdutoAlterar.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void MnFnDesktopCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopCadastrarActionPerformed
+        ViewFuncionarioCadastrar viewFuncionarioCadastrar = new ViewFuncionarioCadastrar();// colocando o tela dentro do painel
+        DesktopFuncionario.add(viewFuncionarioCadastrar);
+        viewFuncionarioCadastrar.setVisible(true);
+        
+    }//GEN-LAST:event_MnFnDesktopCadastrarActionPerformed
+
+    private void MnFnDesktopCadastrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopCadastrar1ActionPerformed
+        ViewClienteCadastrar viewClienteCadastrar = new ViewClienteCadastrar();
+        DesktopFuncionario.add(viewClienteCadastrar);
+        viewClienteCadastrar.setVisible(true);
+    }//GEN-LAST:event_MnFnDesktopCadastrar1ActionPerformed
+
+    private void MnFnDesktopGestao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnFnDesktopGestao1ActionPerformed
+        // TODO add your handling code here:
+        ViewGestaoCliente viewGestaoCliente = new ViewGestaoCliente();
+        DesktopFuncionario.add(viewGestaoCliente);
+        viewGestaoCliente.setVisible(true);
+    }//GEN-LAST:event_MnFnDesktopGestao1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -293,23 +291,24 @@ public class ViewFuncionarioDesktop extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane DesktopFuncionario;
-    private javax.swing.JMenuItem MnFnDesktopAlterar;
+    private javax.swing.JMenuItem MnFnDesktopCadastrar;
+    private javax.swing.JMenuItem MnFnDesktopCadastrar1;
     private javax.swing.JMenuItem MnFnDesktopCadastrarProduto;
-    private javax.swing.JMenuItem MnFnDesktopCarrinho;
     private javax.swing.JMenuItem MnFnDesktopCriadores;
-    private javax.swing.JMenuItem MnFnDesktopDeletar;
-    private javax.swing.JMenuItem MnFnDesktopEstoque;
     private javax.swing.JMenu MnFnDesktopFile;
-    private javax.swing.JMenuItem MnFnDesktopLoja;
+    private javax.swing.JMenuItem MnFnDesktopGestao;
+    private javax.swing.JMenuItem MnFnDesktopGestao1;
     private javax.swing.JMenu MnFnDesktopNavegador;
-    private javax.swing.JMenuItem MnFnDesktopPesquisar;
+    private javax.swing.JMenu MnFnDesktopNavegador1;
     private javax.swing.JMenu MnFnDesktopProduto;
     private javax.swing.JMenu MnFnDesktopRelatorio;
-    private javax.swing.JMenuItem MnFnDesktopRelatorioCliente;
     private javax.swing.JMenuItem MnFnDesktopRelatorioMensal;
     private javax.swing.JMenuItem MnFnDesktopSair;
     private javax.swing.JMenu MnFnDesktopSobre;
+    private javax.swing.JMenuItem MnFnDesktopVenda;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     // End of variables declaration//GEN-END:variables
+
+   
 }
